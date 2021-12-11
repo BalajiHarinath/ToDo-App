@@ -1,0 +1,134 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0;
+  background-image: linear-gradient(120deg, rgb(141, 141, 247), pink);
+}
+
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}
+
+form button,
+form input {
+  background: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.todo-button {
+  cursor: pointer;
+}
+
+.todo-button:hover {
+  background: black;
+  color: white;
+}
+
+.todo-item {
+  list-style: none;
+  min-width: 30%;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 10rem;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+  background: white;
+}
+
+.todo-list {
+  flex: 1;
+  padding: 0.2rem;
+  margin-bottom: 0;
+}
+
+.trash-btn,
+.complete-btn {
+  border: none;
+  background: white;
+  padding: 0.3rem;
+}
+
+.trash-btn {
+  color: red;
+  cursor: pointer;
+}
+
+.complete-btn {
+  background-color: rgb(119, 187, 16);
+  color: white;
+  cursor: pointer;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.delete {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.trash-btn:focus {
+  background-color: red;
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 0.9rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.select {
+  margin-left: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  padding: 0.673rem;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.select:hover::after {
+  background-color: black;
+  color: white;
+}
